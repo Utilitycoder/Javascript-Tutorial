@@ -4,12 +4,23 @@
         <link href="index.css" rel="stylesheet">
     </head>
     <body>
+        <header>
+            <div class="marquee">
+            <h1 style="color: blue;">Welcome to My Passenger Counter App</h1>
+            </div>
+        </header>
+        <main>
         <h1>People entered:</h1>
         <h2 id="count-el">0</h2>
         <button id="increment-btn" onclick="increment()">INCREMENT</button>
         <!-- create a save button-->
         <button id="save-btn" onclick="save()">SAVE</button>
         <p id="save-el">Previous Entries: </p>
+        </main>
+        <br>
+        <footer id="foot">
+            <i>This app is built by <a href="https://twitter.com/utility6151" id="link">@Utility</a></i>
+        </footer>
         <script src="index.js"></script>
     </body>
 </html>
