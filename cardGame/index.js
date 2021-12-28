@@ -79,3 +79,12 @@ function newCard() {
         renderGame()
     }
 }
+
+// create a function that deducts or add to the money.
+// if (hasBlackJack === true && isAlive === false) {
+//     player.chips += 100
+//     playerEl.textContent = player.name + ": $" + player.chips
+// } else if (isAlive = false && hasBlackJack === false) {
+//     player.chips -= 100
+//     playerEl.textContent = player.name + ": $" + player.chips
+// }
