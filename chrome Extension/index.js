@@ -13,8 +13,16 @@ function renderLeads() {
     // reduce DOM operation
     let listItems = ""
     for (let i = 0; i < myLeads.length; i++) {
-        listItems += "<li><a target='blank' href='" + myLeads[i] +"'>" + myLeads[i] + "</a></li>"
-        // alternative to innerHTML
+    // Previously used for leads display
+        // listItems += "<li><a target='blank' href='" + myLeads[i] +"'>" + myLeads[i] + "</a></li>"
+        listItems += `
+        <li>
+        <a target='blank' href='${myLeads[i]}'>
+        ${myLeads[i]} 
+        </a>
+        </li>`
+
+    // alternative to innerHTML
         // const li = document.createElement("li")
         // li.textContent = myLeads[i]
         // ulEl.append(li)
