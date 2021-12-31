@@ -6,6 +6,8 @@ const ulEl = document.getElementById("ul-el")
 inputBtn.addEventListener("click", function() {
     myLeads.push(inputEl.value)
     inputEl.value = ""
+    // Save the myLeads array to localStorage 
+    localStorage.setItem('myLeads', JSON.stringify(myLeads))
     renderLeads()
 })
 
@@ -17,9 +19,9 @@ function renderLeads() {
         // listItems += "<li><a target='blank' href='" + myLeads[i] +"'>" + myLeads[i] + "</a></li>"
         listItems += `
         <li>
-        <a target='blank' href='${myLeads[i]}'>
-        ${myLeads[i]} 
-        </a>
+            <a target='blank' href='${myLeads[i]}'>
+                ${myLeads[i]} 
+            </a>
         </li>`
 
     // alternative to innerHTML
