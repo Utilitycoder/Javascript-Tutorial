@@ -2,6 +2,7 @@ let myLeads = []
 const inputEl = document.getElementById("input-el")
 const inputBtn = document.getElementById("input-btn")
 const ulEl = document.getElementById("ul-el")
+const deleteBtn = document.getElementById("delete-btn")
 
 let leadsFromLocalStorage = JSON.parse( localStorage.getItem("myLeads") )
 
@@ -10,7 +11,14 @@ if (leadsFromLocalStorage) {
     renderLeads()
 }
 
-inputBtn.addEventListener("click", function() {
+// Listen for double clicks on the delete button and delete database
+deleteBtn.addEventListener("dblclick", function() {
+    localStorage.clear()
+    myLeads = []
+    renderLeads()
+})
+
+inputBtn.addEventListener("dblclick", function() {
     myLeads.push(inputEl.value)
     inputEl.value = ""
     // Save the myLeads array to localStorage 
