@@ -1,14 +1,14 @@
 let myLeads = []
+let oldLeads = []
 const inputEl = document.getElementById("input-el")
 const inputBtn = document.getElementById("input-btn")
 const ulEl = document.getElementById("ul-el")
 const deleteBtn = document.getElementById("delete-btn")
-
 let leadsFromLocalStorage = JSON.parse( localStorage.getItem("myLeads") )
 
 if (leadsFromLocalStorage) {
     myLeads = leadsFromLocalStorage
-    render(leads)
+    render(myLeads)
 }
 // a function to render what is saved.
 function render(leads) {
@@ -36,7 +36,7 @@ function render(leads) {
 deleteBtn.addEventListener("dblclick", function() {
     localStorage.clear()
     myLeads = []
-    render(leads)
+    render(myLeads)
 })
 
 inputBtn.addEventListener("click", function() {
@@ -44,5 +44,5 @@ inputBtn.addEventListener("click", function() {
     inputEl.value = ""
     // Save the myLeads array to localStorage 
     localStorage.setItem("myLeads", JSON.stringify(myLeads))
-    render(leads)
+    render(myLeads)
 })
