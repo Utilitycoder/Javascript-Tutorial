@@ -8,34 +8,18 @@ let leadsFromLocalStorage = JSON.parse( localStorage.getItem("myLeads") )
 
 if (leadsFromLocalStorage) {
     myLeads = leadsFromLocalStorage
-    renderLeads()
+    render(leads)
 }
-
-// Listen for double clicks on the delete button and delete database
-deleteBtn.addEventListener("dblclick", function() {
-    localStorage.clear()
-    myLeads = []
-    renderLeads()
-})
-
-inputBtn.addEventListener("dblclick", function() {
-    myLeads.push(inputEl.value)
-    inputEl.value = ""
-    // Save the myLeads array to localStorage 
-    localStorage.setItem("myLeads", JSON.stringify(myLeads))
-    renderLeads()
-})
-
-function renderLeads() {
-    // reduce DOM operation
+// a function to render what is saved.
+function render(leads) {
     let listItems = ""
-    for (let i = 0; i < myLeads.length; i++) {
+    for (let i = 0; i < leads.length; i++) {
     // Previously used for leads display
         // listItems += "<li><a target='blank' href='" + myLeads[i] +"'>" + myLeads[i] + "</a></li>"
         listItems += `
         <li>
-            <a target='blank' href='${myLeads[i]}'>
-                ${myLeads[i]} 
+            <a target='blank' href='${leads[i]}'>
+                ${leads[i]} 
             </a>
         </li>`
 
@@ -47,3 +31,18 @@ function renderLeads() {
 
     ulEl.innerHTML = listItems
 }
+
+// Listen for double clicks on the delete button and delete database
+deleteBtn.addEventListener("dblclick", function() {
+    localStorage.clear()
+    myLeads = []
+    render(leads)
+})
+
+inputBtn.addEventListener("click", function() {
+    myLeads.push(inputEl.value)
+    inputEl.value = ""
+    // Save the myLeads array to localStorage 
+    localStorage.setItem("myLeads", JSON.stringify(myLeads))
+    render(leads)
+})
