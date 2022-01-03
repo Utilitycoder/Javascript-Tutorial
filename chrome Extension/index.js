@@ -40,8 +40,14 @@ deleteBtn.addEventListener("dblclick", function() {
     render(myLeads)
 })
 
+const tab = [
+    {url:"www.macbook.com"}
+]
+
 tabBtn.addEventListener("click", function() {
-    console.log(tab[0].url)
+    myLeads.push(tab[0].url)
+    localStorage.setItem("myLeads", JSON.stringify(myLeads))
+    render(myLeads)
 })
 
 inputBtn.addEventListener("click", function() {
