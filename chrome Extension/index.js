@@ -11,6 +11,15 @@ if (leadsFromLocalStorage) {
     myLeads = leadsFromLocalStorage
     render(myLeads)
 }
+
+tabBtn.addEventListener("click", function() {
+    chrome.tabs.query({active: true, currentWindow: true}, function(tabs){
+        myLeads.push(tab[0].url)
+        localStorage.setItem("myLeads", JSON.stringify(myLeads))
+        render(myLeads)
+    })
+})
+
 // a function to render what is saved.
 function render(leads) {
     let listItems = ""
@@ -40,19 +49,10 @@ deleteBtn.addEventListener("dblclick", function() {
     render(myLeads)
 })
 
-
-tabBtn.addEventListener("click", function() {
-    myLeads.push(tab[0].url)
+inputBtn.addEventListener("click", function() { 
+    myLeads.push(inputEl.value)
+    inputEl.value = ""
+    // Save the myLeads array to localStorage 
     localStorage.setItem("myLeads", JSON.stringify(myLeads))
-    render(myLeads)
-})
-
-inputBtn.addEventListener("click", function() {
-    chrome.tabs.query({active: true, currentWindow: true}, function(tabs){
-        myLeads.push(inputEl.value)
-        inputEl.value = ""
-        // Save the myLeads array to localStorage 
-        localStorage.setItem("myLeads", JSON.stringify(myLeads))
-        render(myLeads)
-    })
+    render(myLeads)  
 })
