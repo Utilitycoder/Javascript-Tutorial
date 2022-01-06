@@ -40,9 +40,6 @@ deleteBtn.addEventListener("dblclick", function() {
     render(myLeads)
 })
 
-const tab = [
-    {url:"www.macbook.com"}
-]
 
 tabBtn.addEventListener("click", function() {
     myLeads.push(tab[0].url)
@@ -51,9 +48,11 @@ tabBtn.addEventListener("click", function() {
 })
 
 inputBtn.addEventListener("click", function() {
-    myLeads.push(inputEl.value)
-    inputEl.value = ""
-    // Save the myLeads array to localStorage 
-    localStorage.setItem("myLeads", JSON.stringify(myLeads))
-    render(myLeads)
+    chrome.tabs.query({active: true, currentWindow: true}, function(tabs){
+        myLeads.push(inputEl.value)
+        inputEl.value = ""
+        // Save the myLeads array to localStorage 
+        localStorage.setItem("myLeads", JSON.stringify(myLeads))
+        render(myLeads)
+    })
 })
