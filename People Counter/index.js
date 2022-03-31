@@ -3,7 +3,7 @@
 // Create a variable for the html element
 let saveEl = document.getElementById("save-el")
 let countEl = document.getElementById("count-el")
-console.log(countEl)
+
 
 // Create a function to change the content of the html element
 
