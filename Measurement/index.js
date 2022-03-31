@@ -21,6 +21,6 @@ volume.textContent = `${number} liters = ${gallonResult.toFixed(3)} gallons |
 // Solutions for Mass
 let poundsResult = number * 0.453592
 let kilosResult = number * 2.20462
-mass.textContent = `${number} pounds = ${kilosResult.toFixed(3)} kilos | 
-    ${number} kilos = ${poundsResult.toFixed(3)} pounds`
+mass.textContent = `${number} kilos = ${kilosResult.toFixed(3)} pounds | 
+    ${number} pounds = ${poundsResult.toFixed(3)} kilos`
 
