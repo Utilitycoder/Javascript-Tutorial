@@ -72,7 +72,7 @@ function renderGame() {
 // create a new card function
 function newCard() {
     // condition that makes sure only player who is still in the game can ask for a new card
-    if (isAlive === true && hasBlackJack === false) {
+    if (isAlive && !hasBlackJack) {
         let card = getRandomCard()
         sum += card
         cards.push(card)
