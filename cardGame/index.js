@@ -21,7 +21,7 @@ playerEl.textContent = player.name + ": $" + player.chips
 
 // create a function to get random number
 function getRandomCard() {
-    let randomNumber = Math.floor( Math.random() * 13 ) + 1
+    let randomNumber = Math.floor( Math.random() * 13 ) + 1 // number from 0 to 14
     if (randomNumber > 10) {
         return 10
     } else if (randomNumber === 1) {
