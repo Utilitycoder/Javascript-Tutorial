@@ -1,0 +1,12 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background: #1F2937;
+    font-family: 'Karla';
+    font-style: normal;
+    color: #ffffff;
+}
+
+.container {
+    margin: 118px 0 0 52px;
+}

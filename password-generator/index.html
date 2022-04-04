@@ -9,11 +9,19 @@
             <h1 class="headings">Generate a</h1>
             <h1 class="heading2">random password</h1>
             <p class="subtitle">Never use an insecure password again.</p>
+            <div class="flex-items">
+                <button class="btn" onclick="generatePassword()"><img src="./Icon.png" >Generate Password</button>
+                <input type="text" id="input-el" placeholder="enter the password length"></input>
+            </div>
+            <hr style="border: 1px solid #2F3E53;"/>
+            <div class="Pass">
+                <h2 id="pass1-el" class="displayPassword"></h2>
+                <h2 id="pass2-el" class="displayPassword"></h2>
+                <h2 id="pass3-el" class="displayPassword"></h2>
+                <h2 id="pass4-el" class="displayPassword"></h2>
+            </div>
         </div>
-        <div class="flex-items">
-            <button class="btn" onclick="generatePassword()"><img src="./Icon.png" >Generate Password</button>
-            <input type="text" id="input-el" placeholder="enter the password length"></input>
-        </div>
+        
 
     </body>
 </html>
