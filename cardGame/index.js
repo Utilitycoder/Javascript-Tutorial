@@ -11,7 +11,7 @@ let message = "" // store the result of gamers game.
 let messageEl = document.getElementById("message-el")
 let sumEl = document.getElementById("sum-el")
 let cardsEl = document.getElementById("cards-el")
-let playerEl = document.querySelector("#player-el")
+let playerEl = document.getElementById("player-el")
 
 
 
