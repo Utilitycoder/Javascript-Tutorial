@@ -11,22 +11,21 @@ html, body {
     margin: 118px 0 0 52px;
 }
 
-.heading1, .heading2{
+h1 {
     margin:0px;
     font-family: 'Karla';
     font-style: normal;
     font-size: 40px;
     line-height: 40px;
     letter-spacing: -0.025em;
+    color: #FFFFFF;
 }
 
-.heading1{
-    color: #FFFFFF;
     
-}
-.heading2{
+.random {
     color:#10B981;
 }
+
 .para{
     color: #D5D4D8;
     font-size: 20px;
