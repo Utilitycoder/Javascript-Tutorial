@@ -10,3 +10,66 @@ html, body {
 .container {
     margin: 118px 0 0 52px;
 }
+
+.heading1, .heading2{
+    margin:0px;
+    font-family: 'Karla';
+    font-style: normal;
+    font-size: 40px;
+    line-height: 40px;
+    letter-spacing: -0.025em;
+}
+
+.heading1{
+    color: #FFFFFF;
+    
+}
+.heading2{
+    color:#10B981;
+}
+.para{
+    color: #D5D4D8;
+    font-size: 20px;
+    line-height: 28px;
+}
+.btn{
+    background:#10B981;
+    color: #FFFFFF;
+    display:flex;
+    /* justify-content: space-around; */
+    padding:10px 20px;
+    border:none;
+    border-radius: 5px
+}
+.btn>img{
+    margin-right: 10px;
+}
+
+.dispPass{
+    /* display:flex;
+    justify-content: space-between */
+    display: grid;
+    grid-template-rows:auto auto ;
+    grid-template-columns: auto auto;
+    grid-column-gap:10px;
+    text-align: center;
+}
+
+.displayPassword{
+    background: #273549;
+    border-radius: 6px;
+    font-size: 16px;
+    line-height: 32px;
+    text-align: center;
+    color: #55F991;
+}
+
+.flex-items{
+    display:flex;
+}
+
+input{
+    margin-left: 20px;
+    background:none;
+    border:none;
+}
