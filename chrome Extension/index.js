@@ -50,9 +50,8 @@ deleteBtn.addEventListener("dblclick", function() {
 })
 
 inputBtn.addEventListener("click", function() { 
-    myLeads.push(inputEl.value)
+    myLeads.push(inputEl.value) // save the input value into an array. 
     inputEl.value = ""
-    // Save the myLeads array to localStorage 
-    localStorage.setItem("myLeads", JSON.stringify(myLeads))
+    localStorage.setItem("myLeads", JSON.stringify(myLeads)) // Save the myLeads array to localStorage 
     render(myLeads)  
 })
