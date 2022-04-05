@@ -31,27 +31,3 @@ function generatePassword(){
      }
      return pass;
  }
-
-//  function copyDivToClipboard() {
-//     let range = document.createRange();
-//     range.selectNode(pass1El, pass2El, pass3El, pass4El);
-//     window.getSelection().removeAllRanges(); // clear current selection
-//     window.getSelection().addRange(range); // to select text
-//     document.execCommand("copy");
-//     window.getSelection().removeAllRanges();// to deselect
-// }
-
-let copy = document.querySelectorAll('h2');
-let clipboard = new ClipboardJS(copy);
-
-clipboard.on('success', function (e) {
-  console.info('Action:', e.action);
-  console.info('Text:', e.text);
-  console.info('Trigger:', e.trigger);
-});
-
-clipboard.on('error', function (e) {
-  console.info('Action:', e.action);
-  console.info('Text:', e.text);
-  console.info('Trigger:', e.trigger);
-});
