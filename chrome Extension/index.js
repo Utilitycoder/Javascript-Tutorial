@@ -44,9 +44,9 @@ function render(leads) {
 
 // Listen for double clicks on the delete button and delete database
 deleteBtn.addEventListener("dblclick", function() {
-    localStorage.clear()
-    myLeads = []
-    render(myLeads)
+    localStorage.clear() // clear Localstorage
+    myLeads = [] // Clear the leads array by reasigning the leads array to empty array. 
+    render(myLeads) //clear dom by rendering an empty array
 })
 
 inputBtn.addEventListener("click", function() { 
