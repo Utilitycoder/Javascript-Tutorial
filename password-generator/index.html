@@ -10,18 +10,22 @@
             <p class="subtitle">Never use an insecure password again.</p>
             <div class="flex-items">
                 <button class="btn" onclick="generatePassword()"><img src="Icon.png" >Generate Password</button>
-                <input id="input-el" placeholder="enter the password length"></input>
+                <input id="input-el" class="input" placeholder="enter the password length"></input>
             </div>
             <hr style="border: 1px solid #2F3E53; margin-bottom: 35px; margin-right: 52px;"/>
             <div class="Pass">
-                <h2 id="pass1-el" class="displayPassword" data-clipboard-text="1"></h2>
-                <h2 id="pass2-el" class="displayPassword" odata-clipboard-text="2"></h2>
-                <h2 id="pass3-el" class="displayPassword" data-clipboard-text="3"></h2>
-                <h2 id="pass4-el" class="displayPassword" odata-clipboard-text="4"></h2>
+                <h2 id="pass1-el" class="displayPassword"></h2>
+                <h2 id="pass2-el" class="displayPassword"></h2>
+                <h2 id="pass3-el" class="displayPassword"></h2>
+                <h2 id="pass4-el" class="displayPassword"></h2>
+                
+                <!-- <input type="text" id="pass1-el" class="displayPassword" readonly>
+                <input type="text" id="pass2-el" class="displayPassword" readonly>
+                <input type="text" id="pass3-el" class="displayPassword" readonly>
+                <input type="text" id="pass4-el" class="displayPassword" readonly> -->
             </div>
         </div>
         <script src="index.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.10/dist/clipboard.min.js"></script>
 
     </body>
 </html>
