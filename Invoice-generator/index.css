@@ -1,0 +1,138 @@
+body {
+    margin: 0;
+}
+
+h1 {
+    font-weight: 800;
+    font-size: 40px;
+}
+
+h6 {
+    font-weight: 400;
+    font-size: 16px;
+}
+
+p {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+hr {
+    border: 1px solid #C3C6DB;
+    margin: 30px 0px;
+}
+
+
+
+#main-el {
+    width: 550px;
+    margin: auto;
+    margin-top:30px;
+    font-family: Inter;
+    font-style: normal;
+}
+
+#head-el {
+    height: 150px;
+    text-align: center;
+    color: white;
+    background-color: #3A69D2;
+    padding: 20px 30px;
+}
+
+#bottom-el {
+    box-sizing: border-box;
+    padding: 0px 20px;
+    width: 550px;
+    height: auto;
+    background-color: #1F2937;
+    color: #F5F5F5;
+}
+
+#items-el {
+    text-align: center;
+    padding: 10px;
+}
+
+#invoice-btn {
+    color: white;
+    margin: 30px 0px;
+    width: 510px;
+    height: 44px;
+    font-weight: 500;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3A69D2;
+}
+
+#amount-el {
+    height: auto;
+}
+
+#amount-heading {
+    font-weight: 700;
+    font-size: 12px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#amount-detail {
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+#purchse-el {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#bottom-1-el {
+    display: flex;
+    justify-content: space-between;   
+    margin-bottom: 10px; 
+}
+
+#bottom-2-el {
+    display: flex;
+    justify-content: space-between;    
+}
+
+#dollor-el {
+    color: #918E9B;
+}
+
+#total-el {
+    font-weight: 600px;
+    font-size: 36px;
+}
+
+
+
+.remove-btn {
+    font-weight: 400;
+    font-size: 8px;
+    margin: 0px 10px;
+    background-color: #1F2937;
+    color: #D5D4D8;
+    border: none;
+}
+
+.quantity-el {
+    margin-left: 20px;
+    color: #918E9B;
+}
+
+.btn-items-el{
+    margin: 10px;
+    background-color: #D1D4F4;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+}
