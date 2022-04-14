@@ -1,6 +1,6 @@
 // Variable Declaration
 
-const btnItemEls = document.getElementsByClassName("btn-items-el");
+const btnItemEls = document.getElementsByClassName("btn-items");
 const invoiceBtn = document.getElementById("invoice-btn");
 const removebtns = document.getElementsByClassName("remove-btn");
 const costEles = document.getElementsByClassName("amt");
@@ -14,7 +14,7 @@ let prices = [10, 20, 30];
 let totalAmt = 0;
 
 
-// adding event listeners to the buttons
+// adding event listeners to the buttons 
 
 btnItemEls[0].addEventListener("click", function () {
     updateItem(0, 1);
@@ -39,6 +39,7 @@ removebtns[2].addEventListener("click", function () {
 })
 
 
+// Functions
 
 function updateItem(item, count) {
     quantity[item] = Math.max(0, quantity[item] + count);

@@ -1,10 +1,12 @@
 body {
     margin: 0;
+    background: #1F2937;
 }
 
 h1 {
     font-weight: 800;
     font-size: 40px;
+    
 }
 
 h6 {
@@ -33,11 +35,16 @@ hr {
 }
 
 #head-el {
-    height: 150px;
+    /* height: 150px;
     text-align: center;
     color: white;
     background-color: #3A69D2;
+    padding: 20px 30px; */
+    color: white;
+    text-align: center;
+    background-color: #3A69D2;
     padding: 20px 30px;
+    margin-top: 0;
 }
 
 #bottom-el {
@@ -129,7 +136,7 @@ hr {
     color: #918E9B;
 }
 
-.btn-items-el{
+.btn-items {
     margin: 10px;
     background-color: #D1D4F4;
     border: none;
