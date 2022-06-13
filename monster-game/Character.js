@@ -27,7 +27,9 @@ class Character {
     }
 
     getHealthBarHtml() {
+        // call getPercentage to return current percentage. this.health x 100 / this.maxHealth
         const percent = getPercentage(this.health, this.maxHealth)
+        // insert the percentage to manipulate health bar
         return `<div class="health-bar-outer">
                         <div class="health-bar-inner ${percent < 26 ? "danger" : ""}" 
                                 style="width:${percent}%;">
@@ -38,8 +40,11 @@ class Character {
 
 
     getCharacterHtml() {
+        // Destructure the object of "this"
         const { elementId, name, avatar, health, diceCount, diceHtml } = this
+        // save result of getHealthBarHtml in healthBar
         const healthBar = this.getHealthBarHtml()
+        // return html elements
         return `
             <div class="character-card">
                 <h4 class="name"> ${name} </h4>
