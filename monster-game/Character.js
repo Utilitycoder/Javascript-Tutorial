@@ -17,6 +17,7 @@ class Character {
             `<div class="dice">${num}</div>`).join("")
     }
 
+    // This function takes this.currentDiceScore as an argument and sum its value
     takeDamage(attackScoreArray) {
         const totalAttackScore = attackScoreArray.reduce((total, num) =>  total + num)
         this.health -= totalAttackScore

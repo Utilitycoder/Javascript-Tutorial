@@ -17,8 +17,8 @@ function attack() {
   if (!isWaiting) {
     wizard.setDiceHtml();
     monster.setDiceHtml();
-    wizard.takeDamage(monster.currentDiceScore);
-    monster.takeDamage(wizard.currentDiceScore);
+    wizard.takeDamage(monster.currentDiceScore); // Minus total of monster returned dice from wizard
+    monster.takeDamage(wizard.currentDiceScore); // Minus total of wizard returned dice from monster
     render();
 
     if (wizard.dead) {
