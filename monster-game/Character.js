@@ -5,7 +5,7 @@ class Character {
     constructor(data) {
         Object.assign(this, data) //Copy all info from "data" to "this" class.
         this.maxHealth = this.health
-        this.diceHtml = getDicePlaceholderHtml(this.diceCount) //"this.dicecount" is comming from the info copied
+        this.diceHtml = getDicePlaceholderHtml(this.diceCount) //"this.diceCount" is coming from the info copied
     }
 
     // The methods in the constructor function
