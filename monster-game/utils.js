@@ -1,3 +1,4 @@
+// Create a new array of length diceCount, fill it with 0 and then map over the array to return random numbers
 function getDiceRollArray(diceCount) {
     return new Array(diceCount).fill(0).map(() =>
         Math.floor(Math.random() * 6) + 1
