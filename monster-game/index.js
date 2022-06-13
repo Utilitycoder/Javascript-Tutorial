@@ -3,24 +3,25 @@ import Character from "./Character.js";
 
 let monstersArray = ["orc", "demon", "goblin"];
 let isWaiting = false;
-let confe = document.getElementById("my-canvas");
-var confettiSettings = { target: confe };
-var confetti = new ConfettiGenerator(confettiSettings);
-confetti.render();
+// let confe = document.getElementById("my-canvas");
+// var confettiSettings = { target: confe };
+// var confetti = new ConfettiGenerator(confettiSettings);
+// confetti.render();
 
+// Returns a monster from monstersArray
 function getNewMonster() {
-  const nextMonsterData = characterData[monstersArray.shift()];
+  const nextMonsterData = characterData[monstersArray.pop()]; // Value is the
   return nextMonsterData ? new Character(nextMonsterData) : {};
 }
 
-// Attack Function controls the major logic of the game. 
+// Attack Function controls the major logic of the game.
 function attack() {
   if (!isWaiting) {
     wizard.setDiceHtml(); // Display current state of wizard
     monster.setDiceHtml(); // Display current state of monster
     wizard.takeDamage(monster.currentDiceScore); // Minus total of monster returned dice from wizard
     monster.takeDamage(wizard.currentDiceScore); // Minus total of wizard returned dice from monster
-    render(); // Render new state to the DOM 
+    render(); // Render new state to the DOM
 
     if (wizard.dead) {
       endGame();
