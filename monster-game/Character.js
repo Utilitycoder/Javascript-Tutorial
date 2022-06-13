@@ -22,8 +22,8 @@ class Character {
         const totalAttackScore = attackScoreArray.reduce((total, num) =>  total + num)
         this.health -= totalAttackScore
         if (this.health <= 0) {
-            this.dead = true
-            this.health = 0
+            this.dead = true  //Character alive or dead boolean
+            this.health = 0 //Set character health score
         }
     }
 

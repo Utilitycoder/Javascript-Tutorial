@@ -13,13 +13,14 @@ function getNewMonster() {
   return nextMonsterData ? new Character(nextMonsterData) : {};
 }
 
+// Attack Function controls the major logic of the game. 
 function attack() {
   if (!isWaiting) {
-    wizard.setDiceHtml();
-    monster.setDiceHtml();
+    wizard.setDiceHtml(); // Display current state of wizard
+    monster.setDiceHtml(); // Display current state of monster
     wizard.takeDamage(monster.currentDiceScore); // Minus total of monster returned dice from wizard
     monster.takeDamage(wizard.currentDiceScore); // Minus total of wizard returned dice from monster
-    render();
+    render(); // Render new state to the DOM 
 
     if (wizard.dead) {
       endGame();
