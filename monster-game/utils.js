@@ -8,7 +8,7 @@ const getPercentage = (remainingHealth, maximumHealth) =>
     (100 * remainingHealth) / maximumHealth
 
 function getDicePlaceholderHtml(diceCount) {
-    return new Array(diceCount).fill(0).map(() =>
+    return new Array(diceCount).fill(0).map(() => //fill the new array created with 0 and map it 
         `<div class="placeholder-dice"></div>`
     ).join("")
 }

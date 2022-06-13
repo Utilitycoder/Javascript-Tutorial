@@ -1,8 +1,13 @@
 import characterData from './data.js'
 import Character from './Character.js'
 
+
 let monstersArray = ["orc", "demon", "goblin"]
 let isWaiting = false
+let confe = document.getElementById("my-canvas")
+var confettiSettings = { target: confe };
+var confetti = new ConfettiGenerator(confettiSettings);
+confetti.render();
 
 function getNewMonster() {
     const nextMonsterData = characterData[monstersArray.shift()]
@@ -36,6 +41,8 @@ function attack() {
     }
 }
 
+
+    
 function endGame() {
     isWaiting = true
     const endMessage = wizard.health === 0 && monster.health === 0 ?
@@ -44,8 +51,9 @@ function endGame() {
             "The monsters are Victorious"
 
     const endEmoji = wizard.health > 0 ? "🔮" : "☠️"
-        setTimeout(()=>{
-            document.body.innerHTML = `
+        setTimeout(()=> {
+            document.body.innerHTML = lastPage()
+                 `
                 <div class="end-game">
                     <h2>Game Over</h2> 
                     <h3>${endMessage}</h3>
@@ -54,6 +62,7 @@ function endGame() {
                 `
         }, 1500)
 }
+
 
 document.getElementById("attack-button").addEventListener('click', attack)
 
